@@ -8,5 +8,5 @@
 
 * [운영체제](https://github.com/jxxngho/Assignment/tree/master/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C) : 3학년 1학기에 수강한 운영체제 과제입니다. 
 
-* [알고리즘](https://github.com/jxxngho/Assgnment/tree/master/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98) : 3학년 2학기에 수강한 알고리즘 과제입니다. 
+* [알고리즘](https://github.com/jxxngho/Assignment/tree/master/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98) : 3학년 2학기에 수강한 알고리즘 과제입니다. 
 
