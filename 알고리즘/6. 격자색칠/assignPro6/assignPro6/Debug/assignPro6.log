@@ -1,4 +1,4 @@
 ﻿  grid.cpp
-C:\Users\admin\source\repos\assignPro6\assignPro6\grid.cpp(70,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\admin\source\repos\assignPro6\assignPro6\grid.cpp(99,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\admin\source\repos\assignPro6\assignPro6\grid.cpp(73,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\admin\source\repos\assignPro6\assignPro6\grid.cpp(102,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   assignPro6.vcxproj -> C:\Users\admin\source\repos\assignPro6\Debug\assignPro6.exe

@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <algorithm>
 using namespace std;
 ifstream fin("grid.inp");
 ofstream fout("grid.out");
