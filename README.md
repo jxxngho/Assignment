@@ -2,7 +2,7 @@
 
 ## 목차
 
-* [이산수학](https://github.com/jxxngho/Assgnment/tree/master/%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99) : 2학년 2학기에 수강한 이산수학 과제입니다.
+* [이산수학](https://github.com/jxxngho/Assignment/tree/master/%EC%9D%B4%EC%82%B0%EC%88%98%ED%95%99) : 2학년 2학기에 수강한 이산수학 과제입니다.
 
 * [데이터구조](https://github.com/jxxngho/Assgnment/tree/master/%EB%8D%B0%EC%9D%B4%ED%84%B0%EA%B5%AC%EC%A1%B0) : 3학년 1학기에 수강한 데이터구조 과제입니다.
 
