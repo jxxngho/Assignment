@@ -1,9 +1,0 @@
-﻿  test.cpp
-C:\Users\admin\source\repos\assignProject1\assignProject1\test.cpp(26,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\admin\source\repos\assignProject1\assignProject1\test.cpp(28,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\admin\source\repos\assignProject1\assignProject1\test.cpp(46,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\admin\source\repos\assignProject1\assignProject1\test.cpp(47,14): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\admin\source\repos\assignProject1\assignProject1\test.cpp(51,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\admin\source\repos\assignProject1\assignProject1\test.cpp(52,14): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
-C:\Users\admin\source\repos\assignProject1\assignProject1\test.cpp(68,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  assignProject1.vcxproj -> C:\Users\admin\source\repos\assignProject1\Debug\assignProject1.exe
