@@ -5,21 +5,21 @@
 using namespace std;
 
 int main(void) {
-	ifstream fin("C:\\Users\\admin\\Desktop\\ÀÌ°É·ÎÇÏÀÚ.txt");
+	ifstream fin("multi.inp");
 	//ifstream fin("C:\\Users\\admin\\Desktop\\markingData1 (1)\\10.inp");
 	ofstream fout("multi.out");
 
-	string number; // N°³ÀÇ ÇÁ·Î±×·¥.
+	string number; // Nê°œì˜ í”„ë¡œê·¸ë¨.
 	getline(fin, number);
 	int pronum = stoi(number);
-	int current = 0; //ÇöÀç ÀÔÃâ·Â
-	int selectedProcess = 0; //ÇöÀç ½ÇÇàÁßÀÎ ÇÁ·Î¼¼½º.
-	int idleTime = 0; //À¯ÈŞ½Ã°£
-	int cputime = 0; // ÃÑ cpu½Ã°£
+	int current = 0; //í˜„ì¬ ì…ì¶œë ¥
+	int selectedProcess = 0; //í˜„ì¬ ì‹¤í–‰ì¤‘ì¸ í”„ë¡œì„¸ìŠ¤.
+	int idleTime = 0; //ìœ íœ´ì‹œê°„
+	int cputime = 0; // ì´ cpuì‹œê°„
 
-	vector <vector<int>> arr(pronum, vector<int>(1000, 0)); // 2Â÷¿ø¹è¿­¿¡ ³ÖÀ»°Í
-	vector <int> iotime(pronum, 0);  // ÀÔÃâ·Â½Ã°£Ã¼Å©.
-	// 2Â÷¿ø¹è¿­¿¡ ÀúÀå
+	vector <vector<int>> arr(pronum, vector<int>(1000, 0)); // 2ì°¨ì›ë°°ì—´ì— ë„£ì„ê²ƒ
+	vector <int> iotime(pronum, 0);  // ì…ì¶œë ¥ì‹œê°„ì²´í¬.
+	// 2ì°¨ì›ë°°ì—´ì— ì €ì¥
 	for (int i = 0; i < pronum; i++) {
 		for (int j = 0;; j++) {
 			fin >> arr[i][j];
@@ -29,24 +29,24 @@ int main(void) {
 			}
 		}
 	}
-	int count = 0; // Â¦¼ö°³¼ö¸¸Å­ ¼¼¼­ ¹İº¹È½¼ö Á¤ÇÔ.
+	int count = 0; // ì§ìˆ˜ê°œìˆ˜ë§Œí¼ ì„¸ì„œ ë°˜ë³µíšŸìˆ˜ ì •í•¨.
 	for (int i = 0; i < pronum; i++) {
 		for (int j = 0;; j += 2) {
 			if (arr[i][j] == 0) break;
 			count++;
 		}
-	} //¹İº¹È½¼ö Á¤ÇÔ.
+	} //ë°˜ë³µíšŸìˆ˜ ì •í•¨.
 
 	int count_process = pronum;
-	int size = iotime.size();  // iotime °¹¼ö
+	int size = iotime.size();  // iotime ê°¯ìˆ˜
 	//int i = 0;
 	while (true) {
-		if (count == 0) break;  // Á¾·áÁ¶°Ç
+		if (count == 0) break;  // ì¢…ë£Œì¡°ê±´
 		//cout << "time: " << cputime << " selected number: " << selectedProcess << " idletime: " << idleTime << endl << endl;
 		for (i = 0;; i += 2) {
 			if (arr[selectedProcess][i] != 0) {
 				current = arr[selectedProcess][i];
-			//	cout << "ÇöÀç current? " << current << "count_process: " << count_process << endl;
+			//	cout << "í˜„ì¬ current? " << current << "count_process: " << count_process << endl;
 				arr[selectedProcess][i] = 0;
 				break;
 			}
@@ -57,8 +57,8 @@ int main(void) {
 			current--; cputime++;
 			for (int i_two = 0; i_two < size; i_two++) {
 				iotime[i_two]--;
-			//	cout << "iotime " << i_two << "¹øÂ°" << iotime[i_two] << endl;
-			} //ÀÔÃâ·Â ½Ã°£ ÇÏ³ª¾¿ »©±â.
+			//	cout << "iotime " << i_two << "ë²ˆì§¸" << iotime[i_two] << endl;
+			} //ì…ì¶œë ¥ ì‹œê°„ í•˜ë‚˜ì”© ë¹¼ê¸°.
 			//cout << endl;
 		} // while	
 
@@ -69,19 +69,19 @@ int main(void) {
 
 			for (int k = 0; k < 100; k++) {
 				if (arr[selectedProcess][k] != 0)
-					goto yogi; // 0ÀÌ ¾Æ´Ñ°Ô ÇÏ³ª¶óµµ ÀÖÀ¸¸é ¾Æ¿ô.
+					goto yogi; // 0ì´ ì•„ë‹Œê²Œ í•˜ë‚˜ë¼ë„ ìˆìœ¼ë©´ ì•„ì›ƒ.
 
 			} //for
 			if (count == 1) {
 				for (int j = 0; j < iotime[selectedProcess]; j++) {
 					cputime++;
-				} //¸¶Áö¸· idleTimeÀº cpuÀ¯ÈŞ½Ã°£ÀÌ ¾Æ´Ô.
+				} //ë§ˆì§€ë§‰ idleTimeì€ cpuìœ íœ´ì‹œê°„ì´ ì•„ë‹˜.
 				goto EXIT;
 			}
 			if (iotime[selectedProcess] > 0) {
 				iotime[selectedProcess] = 0;
 			}
-			//cout << "³¡³ª´Â ÇÁ·Î¼¼½º ¹øÈ£: " << selectedProcess << endl;
+			//cout << "ëë‚˜ëŠ” í”„ë¡œì„¸ìŠ¤ ë²ˆí˜¸: " << selectedProcess << endl;
 			count_process--;
 		yogi:
 			int count_amniotic = 0;
@@ -93,7 +93,7 @@ int main(void) {
 			if (count_amniotic == count_process) {
 				for (int i = 0; i < size; i++) {
 					iotime[i]--;
-					//cout << "iotime " << i << "¹øÂ°" << iotime[i] << endl;
+					//cout << "iotime " << i << "ë²ˆì§¸" << iotime[i] << endl;
 				}
 				//cout << endl;
 				idleTime++;
