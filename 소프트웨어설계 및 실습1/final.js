@@ -35,7 +35,7 @@ class tmp{
 let stream=fs.createWriteStream("C:/Users/admin/Desktop/JSCRIPT/final/id.txt",{flags:'a'})
 
 // 회원가입 성공시
-// 긱 아이다마다 파일 하나를 만들어줌.
+// 긱 아이디마다 파일 하나를 만들어줌.
 app.get("/save",(request,response)=>{
     let id=request.query.user_id
     let pw=request.query.user_pw
